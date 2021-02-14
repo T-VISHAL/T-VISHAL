@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+{
+int m=0;
+printf("What do you like to speak the most? 1.TRUTH 2.FALSE ");
+scanf(" %d",&m);
+switch (m)
+{
+case 1:
+printf("TRUTH");
+break;
+case 2:
+printf("FALSE");
+break;
+default:
+printf("Invalid input");
+break;
+}
+return 0;
+}
