@@ -1,0 +1,29 @@
+void main()
+{
+    int a,b;
+    clrscr();
+    printf("Enter value of A: ");
+    scanf("%d",&a);//accepting user input
+    printf("Enter value of B: ");
+    scanf("%d",&b);//accepting user input
+
+    if(a>b)//first swap condition
+    {
+        b=a-b;
+        a=a-b;
+        b=a+b;
+    }
+
+    else
+    if(b>a)//first swap condition
+    {
+        a=b-a;
+        b=b-a;
+        a=b+a;
+    }
+
+    printf("na=%d",a);//printing values after swap
+    printf("nb=%d",b);
+    getch();
+
+}
