@@ -1,0 +1,29 @@
+void main()
+{
+    int a,b;
+    clrscr();
+    printf("Enter value of A: ");
+    scanf("%d",&a);
+    printf("Enter value of B: ");
+    scanf("%d",&b);
+
+    if(a>b)
+    {
+        b=a-b;
+        a=a-b;
+        b=a+b;
+    }
+
+    else
+    if(b>a)
+    {
+        a=b-a;
+        b=b-a;
+        a=b+a;
+    }
+
+    printf("na=%d",a);
+    printf("nb=%d",b);
+    getch();
+
+}
