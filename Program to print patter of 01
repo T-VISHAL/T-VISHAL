@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+
+   int row, c, n, temp;
+
+
+   temp = 6;
+
+
+   for ( row = 1 ; row <= 6 ; row++ )
+   {
+
+      for ( c = 1 ; c < temp ; c++ )
+         printf(" ");
+      temp--;
+
+
+      for ( c = 1 ; c <= 2*row - 1 ; c++ )
+         printf("01");
+
+      printf("\n");
+   }
+
+   return 0;
+}
