@@ -1,0 +1,51 @@
+#include<stdio.h>
+#include <stdlib.h>
+int main()
+{
+      FILE *fp, *fp2;
+      char ch,c;
+      int i,pos;
+
+    printf("Enter the filename to open for reading \n");
+    scanf("%s", fp);
+      fp=fopen("input.txt","r");
+      if(fp==NULL)
+      {
+            printf("File does not exist..");
+      }
+      fseek(fp,0,SEEK_END);
+      pos=ftell(fp);                     //printf("Current postion is %d\n",pos);
+
+      i=0;
+      while(i<pos)
+       {
+            i++;
+            fseek(fp,-i,SEEK_END);       //printf("%c",fgetc(fp));
+            ch=fgetc(fp);
+            printf("%c",ch);
+      }
+      return 0;
+
+ printf("Enter the filename to open for writing \n");
+    scanf("%s", fp2);
+    fp2 = fopen(fp2, "w");
+    if (fp2 == NULL)
+    {
+        printf("Cannot open file %s \n", fp2);
+        exit(0);
+    }
+
+
+    c = fgetc(fp);
+    while (c != EOF)
+    {
+        fputc(c, fp2);
+        c = fgetc(fp);
+    }
+
+    printf("\nContents copied to %s", fp2);
+
+    fclose(fp);
+    fclose(fp2);
+    return 0;
+}
